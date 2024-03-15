@@ -1,6 +1,6 @@
 ## Linguistic Gaming with Python
 ## Daniel Wambach, Mary-Kate Murphy and Michelle Vuong
-## "Who Wants to be a Professor?", inspired by the game show "Who wants to be a Millionaire?"
+## "Who Wants to Be a Professor?", inspired by the game show "Who Wants to Be a Millionaire?"
 
 
 # import pygame, random, sys
@@ -52,7 +52,7 @@ def main():
     # draw screen
     screen = pygame.display.set_mode((1200, 600))
     dictionary_assignment()  # instantiate the dictionaries with the corresponding function
-    pygame.display.set_caption("Who wants to be a professor?")
+    pygame.display.set_caption("Who Wants to Be a Professor?")
     scene = "welcome_scene"
     while True:
         if scene == "welcome_scene":
@@ -82,14 +82,14 @@ def welcome(screen):
     cheatsheetBox = pygame.draw.rect(screen, "darkblue", (800, 370, 250, 75))  # cheatsheet box position and colour
 
     # loading logo picture
-    welcome_png = pygame.image.load("Who-wants-to-be-professor.jpg")  # load picture from file
+    welcome_png = pygame.image.load("Who_Wants_to_Be_a_Professor.jpg")  # load picture from file
     welcome_png = pygame.transform.scale(welcome_png, (
         int(welcome_png.get_width() * 0.38), int(welcome_png.get_height() * 0.38)))  # adjust the size of the picture
     screen.blit(welcome_png, (850, 100))  # draws image onto screen
 
     # defining the font and adding text with the display_text function
     font = pygame.font.SysFont("freesansbold.ttf", 35)
-    display_text(screen, "Welcome to 'Who wants to be a professor'!", (280, 190), (150, 900), font, "white")
+    display_text(screen, "Welcome to 'Who Wants to Be a Professor'!", (280, 190), (150, 900), font, "white")
 
     display_text(screen, "Play", (250, 395), (150, 250), font, "white")  # wording and its colour for play box
     display_text(screen, "Info", (570, 395), (475, 250), font, "white")  # wording and its colour for info box
@@ -302,7 +302,7 @@ def info(screen):
 
     # adding text using the display_text-function
     font = pygame.font.SysFont("freesansbold.ttf", 35)
-    display_text(screen, "This game is inspired by the game show 'Who wants to become a millionaire'.\n"
+    display_text(screen, "This game is inspired by the game show 'Who Wants to Be a Millionaire'.\n"
                          "Instead of answering trivia questions, you will be challenged with questions from semantics. "
                          "Each time you answer a question correctly, you proceed to the next level.\n"
                          "Once you have correctly answered three Bachelor's, three Master's and three PhD questions, "
@@ -337,7 +337,7 @@ def cheat(screen):
     display_text(screen, "back", (1070, 530), (1100, 100), font, "white")
 
     # load cheatsheet picture and display it
-    cheatsheet = pygame.image.load("Cheatsheet_V4.png")
+    cheatsheet = pygame.image.load("Cheatsheet.jpg")
     cheatsheet = pygame.transform.scale(cheatsheet,
                                         (int(cheatsheet.get_width() * 0.95), int(cheatsheet.get_height() * 0.95)))
     screen.blit(cheatsheet, (200, 5))  # draws image onto screen
